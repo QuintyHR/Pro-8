@@ -3,8 +3,8 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    font-family: sans-serif;
-    background-color: #bbd5dc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #96e7fd;
     overflow: hidden;
     /* centered column with flex */
     display: flex;
@@ -13,8 +13,19 @@ body {
     justify-content: flex-start;
 }
 
+header {
+    width: 100%;
+    background-color: rgb(4, 37, 75);
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(4, 37, 75);
+    color: white;
+}
+
 #array {
-    background-color: rgb(36, 32, 65);
+    background-color: rgb(4, 37, 75);
     color: white;
     font-family: monospace;
     min-height: 20px;

@@ -3,6 +3,7 @@ let model
 let videoWidth, videoHeight
 let ctx, canvas
 const log = document.querySelector("#array")
+const finger = document.querySelector("#finger")
 const VIDEO_WIDTH = 720
 const VIDEO_HEIGHT = 405
 
@@ -85,7 +86,10 @@ async function predictLandmarks() {
     const predictions = await model.estimateHands(video)
     if (predictions.length > 0) {
         const result = predictions[0].landmarks
+        //console.log(predictions[0].landmarks)
         drawKeypoints(ctx, result, predictions[0].annotations)
+        console.log(predictions[0].annotations)
+        //console.log(predictions[0].annotations.indexFinger[3][1])
         logData(predictions)
     }
 
@@ -103,6 +107,33 @@ function logData(predictions) {
         str += predictions[0].landmarks[i][0] + ", " + predictions[0].landmarks[i][1] + ", " + predictions[0].landmarks[i][2] + ", "
     }
     log.innerText = str
+
+    //Geef aan welke vinger er wordt opgestoken 
+    let yThumb = predictions[0].annotations.thumb[3][1]
+    let yIndex = predictions[0].annotations.indexFinger[3][1]
+    let yMiddle = predictions[0].annotations.middleFinger[3][1]
+    let yRing = predictions[0].annotations.ringFinger[3][1]
+    let yPinky = predictions[0].annotations.pinky[3][1]
+
+    if(yThumb < yIndex && yThumb < yIndex && yThumb < yRing && yThumb < yPinky) {
+       finger.innerText = `You are holding up the thumb`
+    }
+
+    if(yIndex < yThumb && yIndex < yMiddle && yIndex < yRing && yIndex < yPinky) {
+        finger.innerText = `You are holding up the index finger`
+    }
+
+    if(yMiddle < yThumb && yMiddle < yIndex && yMiddle < yRing && yMiddle < yPinky) {
+        finger.innerText = `You are holding up the middle finger (That isn't so nice of you :c)`
+    }
+
+    if(yRing < yThumb && yRing < yIndex && yRing < yMiddle && yRing < yPinky) {
+        finger.innerText = `You are holding up the ring finger`
+    }
+
+    if(yPinky < yThumb && yPinky < yIndex && yPinky < yMiddle && yPinky < yRing) {
+        finger.innerText = `You are holding up the pinky`
+     }
 }
 
 // teken hand en vingers
