@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kNear oefening</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>
+      <h2>K-nearest-neighbour</h2>
+      <p>Bekijk index.js om te zien hoe je met KNN kan werken in javascript</p>
+      <h3>Opdracht</h3>
+      <ol>
+        <li>Train KNN met onderstaande tabel</li>
+        <li>Maak het invoerveld werkend</li>
+        <li>Toon of de ingevoerde data een kat of hond is</li>
+      </ol>
+    </div>
+
+    <div>
+      <h2>Cats and dogs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Length</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Ear</th>
+            <th>Label</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>18</td>
+            <td>9.2</td>
+            <td>8.1</td>
+            <td>2</td>
+            <td>'cat'</td>
+          </tr>
+          <tr>
+            <td>20.1</td>
+            <td>17</td>
+            <td>15.5</td>
+            <td>5</td>
+            <td>'dog'</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>9.1</td>
+            <td>9</td>
+            <td>1.95</td>
+            <td>'cat'</td>
+          </tr>
+          <tr>
+            <td>23.5</td>
+            <td>20</td>
+            <td>20</td>
+            <td>6.2</td>
+            <td>'dog'</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>9.0</td>
+            <td>10</td>
+            <td>2.1</td>
+            <td>'cat'</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>16.7</td>
+            <td>16</td>
+            <td>3.3</td>
+            <td>'dog'</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h3>Classify new animal</h3>
+      <div>
+        <label
+          >Length
+          <input type="text" name="length" id="length" size="5" />
+        </label>
+        <label
+          >Height
+          <input type="text" name="height" id="height" size="5" />
+        </label>
+        <label
+          >Weight
+          <input type="text" name="weight" id="weight" size="5" />
+        </label>
+        <label
+          >Ear
+          <input type="text" name="ear" id="ear" size="5" />
+        </label>
+      </div>
+    </br>
+      <div>
+        <button id="classifybtn">Classify</button>
+      </div>
+    </br>
+      <div id="result"></div>
+    </div>
+
+    <p>
+      <a href="https://github.com/NathanEpstein/KNear" target="_blank">
+        kNear documentatie op github</a
+      >
+      |
+      <a
+        href="https://github.com/HR-CMGT/PRG08-2021-2022/tree/main/week4"
+        target="_blank"
+      >
+        PRG8 Week 4 op github</a
+      >
+    </p>
+
+    <script defer src="src/index.js"></script>
+  </body>
+</html>
