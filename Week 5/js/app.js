@@ -82,8 +82,8 @@ function predict() {
 
     diabetesGreen.innerHTML = `${amountCorrectDiabetes}`
     actuallyHealthy.innerHTML = `${amountFalseDiabetes}`
-    actuallyDiabetes.innerHTML = `${amountCorrectHealthy}`
-    healthyGreen.innerHTML = `${amountFalseHealthy}`
+    actuallyDiabetes.innerHTML = `${amountFalseHealthy}`
+    healthyGreen.innerHTML = `${amountCorrectHealthy}`
 
     console.log(`The accuracy is: ${accuracy}`)
 }
