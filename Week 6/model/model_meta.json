@@ -1,0 +1,1 @@
+{"inputUnits":[4],"outputUnits":1,"inputs":{"horsepower":{"dtype":"number","min":46,"max":230},"weight":{"dtype":"number","min":1613,"max":5140},"cylinders":{"dtype":"number","min":3,"max":8},"acceleration":{"dtype":"number","min":8,"max":24.8}},"outputs":{"mpg":{"dtype":"number","min":9,"max":46.6}},"isNormalized":true}
