@@ -43,7 +43,7 @@ function loadModel() {
     weights: 'model/model.weights.bin',
   };
   
-  nn.load(modelInfo, predict())
+  nn.load(modelInfo, predict)
   console.log("Model loaded")
 }
 
@@ -58,5 +58,5 @@ async function predict() {
   const results = await nn.predict(predictEmission);
 
   console.log(`Deze auto verbruikt ${results[0].Emission} g/km`);
-  fillPrediction.innerHTML(`Uw auto verbruikt ${results[0].Emission} g/km`)
+  fillPrediction.innerHTML = `Uw auto verbruikt ${results[0].Emission} g/km`
 }
