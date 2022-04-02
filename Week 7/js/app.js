@@ -47,7 +47,7 @@ function createNeuralNetwork(data) {
     Brand: emission.Brand,
     FuelConsumptionCity: emission.FuelConsumptionCity,
     FuelConsumptionComb: emission.FuelConsumptionComb
- }))
+  }))
 
   data.sort(() => Math.random() - 0.5);
 
