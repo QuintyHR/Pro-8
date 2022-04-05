@@ -1,0 +1,1 @@
+{"inputUnits":[4],"outputUnits":1,"inputs":{"Cylinders":{"dtype":"number","min":3,"max":16},"Brand":{"dtype":"number","min":1,"max":42},"FuelConsumptionCity":{"dtype":"number","min":4.6,"max":30.2},"FuelConsumptionComb":{"dtype":"number","min":11,"max":60}},"outputs":{"Emission":{"dtype":"number","min":108,"max":522}},"isNormalized":true}
