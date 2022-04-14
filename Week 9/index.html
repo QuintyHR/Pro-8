@@ -16,7 +16,15 @@
 <body>
     <h1>Voorspel jouw uitstoot</h1>
 
+    <p>Door het in te vullen van het formulier kunt u de hoeveelhied uitstoot berekenen voor uw auto.</p>
+
+    <p>Let op: dit formulier is alleen in te vullen voor auto's die op benzine rijden!</p>
+
+    <br>
+
     <form>
+        <br> 
+        
         <label for="brand">Auto merk:</label><br>
         <select id="brand" name="brand"><br>
             <option value="1">Acura</option>
@@ -73,7 +81,7 @@
         <label for="fuelConsumption">Hoeveelheid benzine verbruik (in mpg):</label><br>
         <input type="text" id="fuelConsumption" name="fuelConsumption"><br><br>
 
-        <input id="predict" type="button" value="Voorspel">
+        <input id="predict" type="button" value="Voorspel"><br><br>
     </form>
 
     <p id="prediction"></p>

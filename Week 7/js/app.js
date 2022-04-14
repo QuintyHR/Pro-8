@@ -63,7 +63,7 @@ function createNeuralNetwork(data) {
   }
 
   nn.normalizeData();
-  // nn.train({ epochs: 100 }, () => finishedTraining());
+  nn.train({ epochs: 100 }, () => finishedTraining());
 }
 
 async function finishedTraining() {

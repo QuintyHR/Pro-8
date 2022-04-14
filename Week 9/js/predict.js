@@ -14,6 +14,7 @@ let inputFuelConsumption
 let currentInputFuelConsumption
 
 let predictEmission
+let emissionResult
 
 document.getElementById('predict').onclick = function (){ inputs() }
 
@@ -44,7 +45,7 @@ function loadModel() {
   };
   
   nn.load(modelInfo, predict)
-  console.log("Model loaded")
+  // console.log("Model loaded")
 }
 
 async function predict() {
@@ -57,6 +58,8 @@ async function predict() {
 
   const results = await nn.predict(predictEmission);
 
-  console.log(`Deze auto verbruikt ${results[0].Emission} g/km`);
-  fillPrediction.innerHTML = `Uw auto verbruikt ${results[0].Emission} g/km`
+  emissionResult = Math.floor(results[0].Emission * 100) / 100
+
+  // console.log(`Deze auto verbruikt ${emissionResult} g/km`);
+  fillPrediction.innerHTML = `Uw auto verbruikt ${emissionResult} g/km`
 }

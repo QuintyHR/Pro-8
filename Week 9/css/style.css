@@ -1,4 +1,31 @@
 body {
+    margin-right: 20%;
+    margin-left: 20%;
     background-color:lightblue;
-    font-family:sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+form {
+    background-color: rgb(64, 164, 197);
+    font-size: 18px;
+}
+
+input, select {
+    width: 150px;
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+#predict {
+    background-color: rgb(25, 103, 129);
+    color: white;
+    font-size: 20px;
+    border: none;
 }
